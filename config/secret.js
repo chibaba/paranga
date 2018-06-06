@@ -1,5 +1,5 @@
 module.exports = {
-  database: 'mongodb://banana:chibaba@ds151809.mlab.com:51809/commerce', 
+  database: 'mongodb://localhost:27017/chibaba',
   port: 3000,
-  secretKey: 'chibaba@arasn'
+  secretKey: 'chibaba@secret'
 }
