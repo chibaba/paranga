@@ -1,0 +1,33 @@
+ .main {
+  margin: 10px 5px 0px 5px
+} 
+
+.post {
+  border: 1px solid skyblue;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.loginform {
+  margin: 5px;
+  padding: 5px;
+}
+
+.isLoggedIn {
+  margin: 5px;
+  border: 1px solid skyblue;
+}
+
+.unsaved {
+  color: whitesmoke;
+  background: gold;
+  border-radius: 50%;
+  border: 2px solid gold;
+}
+
+.saved {
+  color: gold;
+  background: whitesmoke;
+  border-radius: 50%;
+  border: 2px solid whitesmoke; 
+}
