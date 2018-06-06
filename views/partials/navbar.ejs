@@ -1,85 +1,98 @@
-
-
-
 <!DOCTYPE html>
+
+
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Bootstrap, from Twitter</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="chibaba">
 
-     <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="/public/bootstrap/css/bootstrap.min.css" > 
+<head>
+  <meta charset="utf-8">
+  <title>Bootstrap, from Twitter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="chibaba">
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/public/bootstrap/css/bootstrap.min.css">
   <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"> -->
-  
+
   <!-- Custom styles for this template -->
-  <link rel="stylesheets" href="/public/custom.css"> 
-  <link href="/public/style.css" rel="stylesheet"> 
+  <link rel="stylesheets" href="/public/custom.css">
+  <link href="/public/style.css" rel="stylesheet">
 
-  </head>
-  <body>
+</head>
+
+<body>
 
 
-      <nav class="navbar navbar-inverse">
-          <div class="container">
-            <div class="navbar-header">
-              <a class="navbar-brand" href="#">chibaba.ng</a>
-            </div>
-            <ul class="nav navbar-nav">
-              <a class="navbar-brand" href="#">Project name</a>
-            </div>
-                <ul class="nav navbar-nav navbar-right">
-                  <% if (!user) { %> 
-                  <li><a class="dropdown-toggle" data-toggle="dropdown" href="#">Signup / Login</a>
-                   <ul class="dropdown-menu">
-                     <li><a href="/signup">Signup</a></li>
-                     <li><a href="/login">Login</a></li>
-                   </ul>
-                   </li>
-                   % } else { %>
-                   <li><a class="dropdown-toggle" data-toggle="dropdown" href="#"><%= user.profile.name %></a>
-                    <ul class="dropdown-menu">
-                      <li><a href="./profile">Profile</a></li>
-                      <li><a href="/logout">Logout</a></li>
-                      <ul>
-                    </li>
-                    <% } %>
-                  </ul>
-                </div>
-                          
-                  
-               
-             <div>
-             <li> <form class="form-inline" action="/action_page.php">
+  <nav class="navbar navbar-inverse">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">chibaba.ng</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <a class="navbar-brand" href="#">Project name</a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <% if (!user.username) { %>
+        <li>
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Signup / Login</a>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="/signup">Signup</a>
+            </li>
+            <li>
+              <a href="/login">Login</a>
+            </li>
+          </ul>
+        </li>
+        % } else { %>
+        <li>
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            <%= user.profile ? user.profile.name : '' %>
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="./profile">Profile</a>
+            </li>
+            <li>
+              <a href="/logout">Logout</a>
+            </li>
+            <ul>
+        </li>
+        <% } %>
+          </ul>
+          </div>
+
+
+
+          <div>
+            <li>
+              <form class="form-inline" action="/action_page.php">
                 <input class="form-control ml-sm-2" type="text" placeholder="Search">
-                <button class="btn btn-success" type="submit">Search</button></li>
+                <button class="btn btn-success" type="submit">Search</button>
+            </li>
             </form>
             </ul>
           </div>
-    </nav>
-  
+  </nav>
 
 
-    
-
-  
-
-    
 
 
-     <!-- Bootstrap core JavaScript
+
+
+
+
+
+
+  <!-- Bootstrap core JavaScript
     ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
- <script src="/public/jquery/jquery.min.js" integrity="" crossorigin="anonymous"></script>
+  <script src="/public/jquery/jquery.min.js" integrity="" crossorigin="anonymous"></script>
   <script>
     window.jQuery || document.write('<script src="/public/jquery/jquery.min.js"><\/script>')
   </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity=""
-    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="" crossorigin="anonymous"></script>
   <script src="/public/bootstrap/js/bootstrap.min.js"></script>
 </body>
 
 </html>
-
