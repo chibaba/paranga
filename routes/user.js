@@ -3,7 +3,7 @@ const User = require("../models/user");
 const passport = require("passport");
 const passportConf = require("../config/passport");
 
-router.get("/login", (req, res) => {
+router.get("/login", function(req, res)  {
   if (req.user) return res.redirect("/");
   res.render("accounts/login", {
     message: req.flash("logginMessage")
